@@ -1,0 +1,31 @@
+
+library(RCurl)
+library(ggplot2)
+
+rm(list = ls())
+setwd("C:/Users/nnayar/Documents/Personal/Working Directory/ExData_Plotting1")
+
+
+filename <- "exdata-data-household_power_consumption.zip"
+fileurl<-"https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+
+if(!file.exists(filename)){
+        download.file(fileurl, filename, mode = "wb")
+}
+
+if(!file.exists("household_power_consumption.txt")){
+        unzip(filename)
+}
+
+data <- read.table("./household_power_consumption.txt", 
+                   header = TRUE, 
+                   sep = ";" ,
+                   colClasses = c("character", "character", rep("numeric", 7)),
+                   na = "?"
+                   )
+
+sampledata <- data[data$Date %in% c("1/2/2007","2/2/2007") ,]
+
+
+
+
