@@ -1,3 +1,9 @@
+## Setting up environment for the project
+## 1. Load the necessary packages
+## 2. Clear any old variables
+## 3. Set the Working Directory
+## 4. Download and unzip the file
+## 5. Create a small data set for the days between 1/2/2007 and 2/2/2007
 
 library(RCurl)
 library(ggplot2)
