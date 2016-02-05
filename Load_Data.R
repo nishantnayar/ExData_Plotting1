@@ -7,6 +7,7 @@
 
 library(RCurl)
 library(ggplot2)
+library(bitops)
 
 rm(list = ls())
 setwd("C:/Users/nnayar/Documents/Personal/Working Directory/ExData_Plotting1")
